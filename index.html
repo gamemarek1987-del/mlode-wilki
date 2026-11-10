@@ -200,9 +200,10 @@ const WOLVES = [
   { name: 'Maras', nick: 'Zgrywus', line: 'Kto chrapie, ten śpi w busie!', v: 'v17', perk: 'Niedźwiedzie zauważają go dużo później' },
 ];
 /* Voice recordings: key -> file. Empty until the team sends them; lines show as captions either way. */
-const VOICE = Object.fromEntries(Array.from({ length: 17 }, (_, k) => ['v' + (k + 1), `v${k + 1}.mp3`]));
+const VOICE_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 23, 29];
+const VOICE = Object.fromEntries(VOICE_IDS.map(k => ['v' + k, `v${k}.mp3`]));
 const VBUF = {};
-const GRUMBLES = [[1, 'Kiedy jemy?', 'v7'], [4, 'Daleko jeszcze? Bo mi się już odechciało!', 'v10'], [5, 'Mówiłem wam, że to nie ta droga!', 'v12'], [7, 'Kto chrapie, ten śpi w busie!', 'v17'], [0, 'Wieje. Fryzura mi się psuje.', ''], [6, 'Ktoś to w ogóle zaplanował?', ''], [2, 'Tu by się przydała porządna ścieżka.', ''], [3, 'Za mną, znam te tereny.', '']];
+const GRUMBLES = [[1, 'Kiedy jemy?', 'v7'], [4, 'Daleko jeszcze? Bo mi się już odechciało!', 'v10'], [5, 'Mówiłem wam, że to nie ta droga!', 'v12'], [7, 'Kto chrapie, ten śpi w busie!', 'v17'], [0, 'Najpierw drożdżówka, potem selfie, potem ewentualnie szczyt.', 'v29'], [0, 'Lukier mi się topi, przyspieszmy.', 'v23'], [0, 'Spokojnie, mam jeszcze trzy pączki w plecaku. Na czarną godzinę.', 'v19'], [6, 'Ktoś to w ogóle zaplanował?', ''], [2, 'Tu by się przydała porządna ścieżka.', ''], [3, 'Za mną, znam te tereny.', '']];
 const GAME_TIME = 600, WORLD_R = 175, BUS = { x: 4.5, z: 34 }, KRUP = 0.4, LAKE = { x: 46, z: -34, r: 17 };
 const TRAILS = [0.4, 1.75, 2.95, 4.15, 5.0];
 const SHELTER = { x: 25.5, z: -34 };
